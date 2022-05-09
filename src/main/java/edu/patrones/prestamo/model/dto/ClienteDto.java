@@ -1,6 +1,5 @@
 package edu.patrones.prestamo.model.dto;
 
-import edu.patrones.prestamo.model.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
