@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Entity
@@ -79,7 +80,9 @@ public class Cliente implements Serializable {
     @JoinColumn(name = "tipo_inmueble_id")
     private TipoInmueble tipoInmueble;
 
-    @ManyToOne
-    @JoinColumn(name = "estado_civil_id")
+    @ManyToOne@JoinColumn(name = "estado_civil_id")
     private EstadoCivil estadoCivil;
+
+    @OneToMany(mappedBy = "cliente")
+    private List<Solicitud> solicitudes;
 }
