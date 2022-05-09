@@ -13,4 +13,5 @@ public class SolicitudDto {
     private String numeroSolicitud;
     private Double valorSolicitado;
     private Double valorAprobado;
+    private String mensaje;
 }
