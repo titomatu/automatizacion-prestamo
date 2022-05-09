@@ -1,5 +1,6 @@
 package edu.patrones.prestamo.model.dto;
 
+import edu.patrones.prestamo.model.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,12 +20,18 @@ public class ClienteDto {
     private String apellido2;
     private Long celular;
     private String correoElectronico;
-    private Integer tipoContrato;
     private Double salarioMensual;
-    private Integer nivelAcademico;
-    private Integer ocupacion;
     private Date fechaNacimiento;
     private Double totalActivos;
     private Double totalPasivos;
-    private Integer autorizaCentrales;
+    private String autorizaCentrales;
+
+    private String genero;
+    private String tipoResidencia;
+    private Integer actividadEconomica;
+    private String tipoContrato;
+    private String nivelEstudios;
+    private String tipoInmueble;
+    private String estadoCivil;
+
 }

@@ -2,10 +2,7 @@ package edu.patrones.prestamo.model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -37,15 +34,52 @@ public class Cliente implements Serializable {
     @Column(name = "apellido_2")
     private String apellido2;
 
-
+    @Column(name = "numero_celular")
     private Long celular;
+
+    @Column(name = "correo_electronico")
     private String correoElectronico;
-    private Integer tipoContrato;
+
+    @Column(name = "salario_mensual")
     private Double salarioMensual;
-    private Integer nivelAcademico;
-    private Integer ocupacion;
+
+    @Column(name = "fecha_nacimiento")
     private Date fechaNacimiento;
+
+    @Column(name = "total_activos")
     private Double totalActivos;
+
+    @Column(name = "total_pasivos")
     private Double totalPasivos;
-    private Integer autorizaCentrales;
+
+    @Column(name = "autoriza_consulta")
+    private String autorizaCentrales;
+
+    @ManyToOne
+    @JoinColumn(name = "genero_id")
+    private Genero genero;
+
+    @ManyToOne
+    @JoinColumn(name = "tipo_residencia_id")
+    private TipoResidencia tipoResidencia;
+
+    @ManyToOne
+    @JoinColumn(name = "actividad_economica_id")
+    private ActividadEconomica actividadEconomica;
+
+    @ManyToOne
+    @JoinColumn(name = "tipo_contrato_id")
+    private TipoContrato tipoContrato;
+
+    @ManyToOne
+    @JoinColumn(name = "nivel_estudios_id")
+    private NivelEstudios nivelEstudios;
+
+    @ManyToOne
+    @JoinColumn(name = "tipo_inmueble_id")
+    private TipoInmueble tipoInmueble;
+
+    @ManyToOne
+    @JoinColumn(name = "estado_civil_id")
+    private EstadoCivil estadoCivil;
 }
