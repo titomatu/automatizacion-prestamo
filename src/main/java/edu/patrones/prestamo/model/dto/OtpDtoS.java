@@ -1,10 +1,17 @@
 package edu.patrones.prestamo.model.dto;
 
-public class OtpDto {
+public class OtpDtoS {
 
+	private char[] vlrOtp;
 	private int code;
 	private String mensaje;
-	private char[] vlrOtp;
+	
+	public char[] getVlrOtp() {
+		return vlrOtp;
+	}
+	public void setVlrOtp(char[] vlrOtp) {
+		this.vlrOtp = vlrOtp;
+	}
 	public int getCode() {
 		return code;
 	}
@@ -16,11 +23,5 @@ public class OtpDto {
 	}
 	public void setMensaje(String mensaje) {
 		this.mensaje = mensaje;
-	}
-	public char[] getVlrOtp() {
-		return vlrOtp;
-	}
-	public void setVlrOtp(char[] vlrOtp) {
-		this.vlrOtp = vlrOtp;
-	}
+	}	
 }
